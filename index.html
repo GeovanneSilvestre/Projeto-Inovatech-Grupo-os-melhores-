@@ -68,6 +68,7 @@
 
   let recognition = null;
   let isRecording = false;
+  let finalTranscript = '';
 
   function setupASR(){
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -81,8 +82,6 @@
     recognition.lang = 'pt-BR';
     recognition.continuous = true;
     recognition.interimResults = true;
-
-    let finalTranscript = '';
 
     recognition.onstart = () => {
       isRecording = true;
@@ -153,9 +152,10 @@
     });
 
   btnClear.addEventListener('click', () => { 
-    asrOut.value=''; 
-    const textToLibrasDiv = document.getElementById('textoParaLibras');
-    textToLibrasDiv.innerHTML = '<h3>Traduzir a Fala</h3>'; 
+    asrOut.value = ''; 
+    const textToLibrasDiv = document.getElementById('textoParaLibras');
+    textToLibrasDiv.innerHTML = '<h3>Traduzir a Fala</h3>'; 
+    finalTranscript = ''; // <-- Adicione esta linha!
 });
 
   // Qualidade de vida
