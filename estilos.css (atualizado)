@@ -1,0 +1,170 @@
+/* estilos.css - versão verde */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #d4f4dd; /* verde claro */
+  color: #102a43;
+  line-height: 1.6;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cabeçalho */
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #0d6348; /* verde escuro */
+}
+
+/* Panels */
+.panel {
+  width: 100%;
+  max-width: 700px;
+  background: #c6e9d9; /* verde desbotado */
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(13,99,72,0.1);
+}
+
+/* Títulos das seções */
+.panel h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #0d6348; /* verde escuro */
+  text-align: center;
+}
+
+/* Textarea */
+#asrOut {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #0d6348;
+  border-radius: 10px;
+  outline: none;
+  resize: vertical;
+  margin-top: 10px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background-color: #e0f2e8; /* verde mais claro */
+}
+
+#asrOut:focus {
+  border-color: #05673c;
+  box-shadow: 0 0 10px rgba(5,103,60,0.3);
+}
+
+/* Botões */
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #0d6348; /* verde escuro */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin: 5px;
+}
+
+.btn:hover {
+  background-color: #05673c;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Status da gravação */
+.status {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  background-color: gray;
+}
+
+.dot.ok { background-color: green; }
+.dot.err { background-color: red; }
+.dot.warn { background-color: orange; }
+
+/* Resultado GIFs */
+#iconeLibras {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-start;
+  min-height: 50px;
+  border: 1px solid #0d6348;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #d1f0e0; /* verde água */
+}
+
+#iconeLibras img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  border: 1px solid #0d6348;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#iconeLibras img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 10px rgba(5,103,60,0.3);
+}
+
+#iconeLibras span {
+  font-weight: bold;
+  color: red;
+  font-size: 1.1rem;
+}
+
+/* Legendas e dicas */
+.legend {
+  font-size: 0.9rem;
+  color: #0d6348;
+  margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+  #asrOut {
+    font-size: 0.95rem;
+  }
+
+  #iconeLibras img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #0d6348;
+}
