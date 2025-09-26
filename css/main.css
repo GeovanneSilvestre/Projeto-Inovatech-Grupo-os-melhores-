@@ -1,0 +1,149 @@
+.main {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   align-content: center;
+   gap: 50px;
+   padding: 3rem 1.25rem; 
+}
+
+.recording-section, .output-libras-section {
+   background-color: var(--g2);
+   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
+   border: 3px solid var(--g1);
+   padding: 1.5rem 1.25rem;
+   border-radius: 10px;
+   box-sizing: border-box;
+   opacity: 0;
+}
+
+.recording-section h1 {
+   font-family: "Nunito Sans", sans-serif;
+   font-weight: 500;
+   font-size: 1.25rem;
+}
+
+.button {
+   cursor: pointer;
+   margin-top: 20px;
+   padding: 0.75rem 1.25rem;
+   border-radius: 5px;
+   background-color: var(--g1);
+   color: var(--w1);
+   font-size: 1rem;
+   font-weight: 500;
+   font-family: "Roboto", sans-serif;
+}
+
+.button:active {
+   transform: scale(1.05)
+}
+
+.rec-status{
+   display: block;
+   margin-top: 10px;
+   font-family: "Nunito Sans", sans-serif;
+   display: flex;
+   align-items: center;
+   font-size: 1rem;
+}
+
+.rec-status::before {
+   content: "";
+   display: inline-block;
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   margin-right: 5px;
+}
+
+.rec-status.rec-waiting::before {
+   background-color: var(--rc-waiting);
+}
+
+.rec-text {
+   width: 100%;
+   border-radius: 10px;
+   margin-top: 10px;
+   background-color: var(--g3);
+   height: 200px;
+   padding: 1rem;
+   box-sizing: border-box;
+   font-size: 1rem;
+   font-family: "Nunito Sans", sans-serif;
+   outline: none;
+   border: 2px solid var(--g1);
+}
+
+.option-button {
+   display: flex;
+   gap: 20px;
+}
+
+.rec-tip {
+   margin-top: 20px;
+   font-family: "Nunito Sans", sans-serif;
+}
+
+.rec-tip span {
+   color: var(--g1);
+}
+
+.output-libras-section {
+   height: 600px;
+}
+
+@media screen and (min-width: 400px) {
+   .main {
+      padding: 4rem 2rem;
+   }
+
+   .rec-status, .rec-text, .rec-tip {
+      font-size: 0.875rem;
+   }
+   
+   .rec-tip {
+      text-align: center;
+   }
+
+   .recording-section, .output-libras-section {
+      padding: 1.25rem;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+   .main {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+      padding: 0;
+   }
+
+   .recording-section, .output-libras-section  {
+      padding: 1.875rem 2.5rem;
+   }
+
+   .rec-status, .rec-text, .rec-tip {
+      font-size: 1rem;
+   }
+
+   .rec-text {
+      padding: 1rem;
+   }
+
+   .recording-section h1 {
+      font-size: 1.5rem;
+   }
+
+   .button {
+      font-size: 1.25rem;
+   }
+
+   .output-libras {
+      background-color: var(--w1);
+      width: 500px;
+      height: 100%;
+      border-radius: 10px;
+   }
+}
