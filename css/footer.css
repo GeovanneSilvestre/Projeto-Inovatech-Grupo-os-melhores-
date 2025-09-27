@@ -12,6 +12,7 @@
 .footer p {
    color: var(--w1);
    font-size: 0.875rem;
+   font-weight: 500;
 }
 
 @media screen and (min-width: 1200px) {
@@ -21,7 +22,6 @@
 
    .footer {
       position: fixed;
-      background-color: var(--gr1); 
    }
 
    .footer p {

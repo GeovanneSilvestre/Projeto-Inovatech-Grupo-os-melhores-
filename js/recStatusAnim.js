@@ -4,8 +4,7 @@ export default function initStatusAnim() {
 
    if (recStatus.classList.contains('rec-waiting')){
       const statusAnim = document.querySelector('#status-anim');
-      console.log(statusAnim);
-
+      
       const setAnimation = setInterval(() => {
          if (statusAnim.textContent != '...') {
             statusAnim.textContent += '.';

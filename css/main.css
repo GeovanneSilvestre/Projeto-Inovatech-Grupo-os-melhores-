@@ -17,10 +17,11 @@
    opacity: 0;
 }
 
-.recording-section h1 {
+.recording-section h1, .output-libras-section h1 {
    font-family: "Nunito Sans", sans-serif;
    font-weight: 500;
    font-size: 1.25rem;
+   text-align: center;
 }
 
 .button {
@@ -90,8 +91,13 @@
    color: var(--g1);
 }
 
-.output-libras-section {
-   height: 600px;
+
+.output-libras {
+   margin-top: 20px;
+   width: 100%;
+   height: 500px;
+   background-color: var(--w1);
+   border-radius: 5px;
 }
 
 @media screen and (min-width: 400px) {
@@ -133,9 +139,11 @@
       padding: 1rem;
    }
 
-   .recording-section h1 {
+   .recording-section h1, .output-libras-section h1 {
       font-size: 1.5rem;
+      text-align: start;
    }
+
 
    .button {
       font-size: 1.25rem;
@@ -143,8 +151,7 @@
 
    .output-libras {
       background-color: var(--w1);
-      width: 500px;
-      height: 100%;
       border-radius: 10px;
+      width: 500px;
    }
 }
