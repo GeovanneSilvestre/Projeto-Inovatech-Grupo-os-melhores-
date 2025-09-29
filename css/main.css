@@ -4,7 +4,12 @@
    flex-direction: column;
    align-content: center;
    gap: 50px;
-   padding: 3rem 1.25rem; 
+   padding: 3rem 1.25rem;
+   transition: .5s all ease-in-out;
+}
+
+.main:not(.rec-text) {
+   user-select: none;
 }
 
 .recording-section, .output-libras-section {
@@ -15,6 +20,11 @@
    border-radius: 10px;
    box-sizing: border-box;
    opacity: 0;
+}
+
+.output-libras-section.float-mode {
+   position: absolute;
+   z-index: 1;
 }
 
 .recording-section h1, .output-libras-section h1 {
@@ -91,7 +101,6 @@
    color: var(--g1);
 }
 
-
 .output-libras {
    margin-top: 20px;
    width: 100%;
@@ -123,7 +132,7 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      gap: 80px;
+      gap: 100px;
       padding: 0;
    }
 
@@ -143,7 +152,6 @@
       font-size: 1.5rem;
       text-align: start;
    }
-
 
    .button {
       font-size: 1.25rem;
