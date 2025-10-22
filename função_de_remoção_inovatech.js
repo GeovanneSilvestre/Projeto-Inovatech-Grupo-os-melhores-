@@ -15,4 +15,5 @@ function removerConectivos(frases){
       .split (" ")
       .filter(palavra => !conectivos.includes(palavra.toLowercase()))
       .join(" ");
+
 }
